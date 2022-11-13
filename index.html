@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Films</title>
+</head>
+<body>
+    <div class="container">
+        <form class="films-form d-flex mt-5">
+            <select class="film-select form-select w-25">
+                <option value="All">All</option>
+            </select>
+            <input class="film-search-input form-control w-50 ms-3"type="text"placeholder="search..."/>
+            <button class="films-submit-btn btn btn-primary ms-3">Filter</button>
+        </form>
+        <ul class="films__list"></ul>
+        <template id="film-template">
+            <ul class="row d-flex  mt-5">
+                <li class="film card p-4 w-25    mb-3">
+                    <h3 class="film__title">Shazam</h3>
+                    <img class="film__image card-img-top" src="https://image.tmdb.org/t/p/w500/xnopI5Xtky18MPhK40cZAGAOVeV.jpg"alt="Shazam's poster" width="200" height="300"/>
+                    <p class="film__overview">Lorem ipsum dolor sit amet.</p>
+                    <time class="film__time">22.02.10</time>
+                    <ul class="film__genres"></ul>
+                </li>
+            </ul>
+        </template>
+        <template id="film-genre-template">
+            <li class="film-genre">Action</li>
+        </template>
+    </div>
+
+    <script src="js/films.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
